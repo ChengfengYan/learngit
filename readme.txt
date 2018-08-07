@@ -24,12 +24,17 @@ git checkout其实是用版本库里的版本替换工作区的版本，无论�
 已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。
 rm 用于删除本地文件。命令git rm用于删除版本库中文件。删除后并git commit。若误删则可以使用git checkout来使用版本库中版本替代工作区版本。
 
-GitHub Git远程仓库托管服务网站 也可自己搭建运行Git的服务器作为Git远程仓库。从这个“服务器”仓库克隆一份到自己的电脑上，并且各自把各自的提交推送到服务器仓库里，也从服务器仓库中拉取别人的提交。
+GitHub Git远程仓库托管服务网站 也可自己搭建运行Git的服务器作为Git远程仓库。
+从这个“服务器”仓库克隆一份到自己的电脑上，并且各自把各自的提交推送到服务器仓库里，也从服务器仓库中拉取别人的提交。
 
-要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；(git remote add origin git@github.com:ChengfengYan/learngit.git)
+要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；
+(git remote add origin git@github.com:ChengfengYan/learngit.git)
 关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
 此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
-分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！
+分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，当有网络的时候，再把本地提交推送一下就完成了同步.
+
+要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆。(git clone git@github.com:ChengfengYan/gitskills.git)
+Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快。
 
 
 
