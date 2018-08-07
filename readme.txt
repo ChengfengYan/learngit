@@ -1,6 +1,7 @@
 Git is a free software.
 Creating a new branch is quick.
 
+
 <<<<<<< HEAD
 Creating a new branch is quick & simple.
 =======
@@ -51,8 +52,8 @@ Git支持多种协议，包括https，但通过ssh支持的原生git协议速度
 创建+切换分支：git checkout -b <name>
 合并某分支到当前分支：git merge <name>
 删除分支：git branch -d <name>
-
-
-
+Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容
+git log --graph --pretty=oneline可以看提交的历史版本
+git log --graph --pretty=oneline --abbrev-commit可以看分支合并情况
 
 
