@@ -1,6 +1,14 @@
 Git is a free software.
 Creating a new branch is quick.
+
+<<<<<<< HEAD
 Creating a new branch is quick & simple.
+=======
+Creating a new branch is quick AND simple.
+>>>>>>> new_branch
+
+Creating a new branch is quick and simple.
+
 
 初始化一个Git仓库，使用git init命令。
 
