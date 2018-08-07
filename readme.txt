@@ -1,5 +1,5 @@
 Git is a free software.
-
+Creating a new branch is quick.
 
 初始化一个Git仓库，使用git init命令。
 
