@@ -3,7 +3,7 @@ Git is a free software ...
 Creating a new branch is quick.
 Creating a new branch is quick AND simple.
 Creating a new branch is quick and simple.
-
+q
 
 <<<<<<< HEAD
 Creating a new branch is quick & simple.
@@ -70,6 +70,23 @@ git stash list 可查看stash状态
 
 开发一个新feature，最好新建一个分支；
 如果要丢弃一个没有被合并过的分支，可以通过git branch -D <name>强行删除。
+
+要查看远程库的信息，用git remote
+用git remote -v显示更详细的信息
+git push origin master可推送本地master
+
+master分支是主分支，因此要时刻与远程同步；
+dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；
+bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；
+feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。
+
+因此，多人协作的工作模式通常是这样：
+首先，可以试图用git push origin <branch-name>推送自己的修改；
+如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
+如果合并有冲突，则解决冲突，并在本地提交；
+没有冲突或者解决掉冲突后，再用git push origin <branch-name>推送就能成功！
+如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to <branch-name> origin/<branch-name>。
+
 
 
 
